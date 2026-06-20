@@ -32,6 +32,11 @@ add_executable(json_tests
     tests/01-06test.cpp
 )
 
+target_include_directories(json_tests
+    PRIVATE
+    ${CMAKE_SOURCE_DIR}/third_party
+)
+
 target_link_libraries(json_tests
     PRIVATE
     GTest::gtest_main
